@@ -1,7 +1,7 @@
 node("") {
     stage("build") {
-        git("https://github.com/applied-continuous-delivery-livelessons/simple-maven-boot.git")
-        sh("./mvnw clean install")
+        git("https://github.com/lxbrllnt/jenkinsrepo.git")
+        sh("./mvn package")
     }
     stage("deploy") {
         echo("Deploying the artifact")
